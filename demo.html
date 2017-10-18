@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+//By Fatih Polat 
+//07.10.2017 14:30
+-->
+<html>
+  <head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+
+
+
+		<script src="https://code.jquery.com/jquery-2.2.4.js" type="text/javascript"></script>	
+		<script src="categories.js" type="text/javascript"></script>
+		<link href="categories.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+<body >
+
+
+
+<script type="text/javascript">
+		$(document).ready(function ()
+		{
+						$("#dv_categories").loadCategories({
+										categoryid: 0, // root kategori id.
+										auto_fit: true,
+										SelectedCategoriesPathControl: 'SelectedCategoriesPathControl', // seçilen kategorilerin pathini yazdırmak istediğin div
+										HiddenSelectedIDControl: 'HiddenSelectedIDControl', //seçilen kategori idsini yazdırmak istediğin input text
+										Animate: true,
+										ControlWidthReferansElement: null, // bu kategori kontrolünü sayfadaki herhangi bir kontrolün genişliğine (width) endeksleyebilirsin.
+										SelectPerScreen: 2, // aynı anda kaç select kutucuğu görünsün.,
+										CategoryCallPage: 'loadcategory.php'
+						});
+		});
+
+</script>
+
+<div id="dv_categories" style = "width: 600px;height:200px; border: 0px solid black;"></div>
+
+<div id="SelectedCategoriesPathControl"></div>
+
+<input type="text" id="HiddenSelectedIDControl" />
+
+</body>
+</html>

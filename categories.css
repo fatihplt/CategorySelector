@@ -1,0 +1,57 @@
+/*
+//By Fatih Polat 
+//07.10.2017 14:30
+*/
+
+#dv_categories {
+
+	border: 0px solid black;
+	width: 700px;
+	white-space: nowrap;
+	overflow: hidden;	
+	display: inline-block;		
+	height: 160px;		
+	margin-top: 3px;
+	display: none;
+} 
+
+#dv_categories select {
+
+	padding: 3px;	
+	padding-left : 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;		
+	border: 1px solid #888;	
+	color: #888; 	
+	outline: none;	
+	-webkit-appearance: none;  
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	width: 200px;
+	height: 100%;	
+	position: relative;
+	overflow: auto;	
+}
+
+#dv_selectedPath
+{
+	text-shadow: 1px 1px 0 #000;
+	margin: 10px 0 20px;
+	font-weight: bold;
+	font-family: 'Istok Web', calibri;
+}
+
+#dv_selectedPath a
+{
+	text-decoration: none;
+	color: navy;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	select {
+		padding-right: 18px
+	}
+}
